@@ -463,9 +463,9 @@ class AppleMusicAPI
      *
      * @throws AppleMusicAPIException
      */
-    public function searchCatalog($storefront, $searchTerm, $searchTypes, $offset, $limit)
+    public function searchCatalog($storefront, $searchTerm, $searchTypes, $offset, $limit, $with)
     {
-        $requestUrl = sprintf('catalog/%s/search?term=%s&types=%s&offset=%s&limit=%s', $storefront, $searchTerm, $searchTypes, $offset, $limit);
+        $requestUrl = sprintf('catalog/%s/search?term=%s&types=%s&offset=%s&limit=%s&with=%s', $storefront, $searchTerm, $searchTypes, $offset, $limit, $with);
 
         return $this->client->apiRequest('GET', $requestUrl);
     }
